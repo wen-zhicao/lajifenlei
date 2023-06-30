@@ -64,7 +64,7 @@ model.compile(optimizer=tf.optimizers.SGD(0.0001), loss='categorical_crossentrop
 history = model.fit(train_generator,
                 steps_per_epoch=math.ceil(train_generator.n/train_generator.batch_size),
                 epochs=6,
-                callbacks=[keras.callbacks.EarlyStopping(patience=3)],
+                callbacks=[tf.keras.callbacks.EarlyStopping(patience=3)],
                 validation_data=val_generator,
                 verbose=1)
 
